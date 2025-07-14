@@ -1,66 +1,30 @@
-import { Link } from "react-router-dom";
+import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Company Info */}
-          <div>
-            <img 
-              src="/lovable-uploads/562ca32c-219a-40d5-8218-ea4d69cb7994.png" 
-              alt="SahStore DZ" 
-              className="h-10 w-auto mb-4"
-            />
-            <p className="text-muted-foreground">
-              Premium accessories and gadgets for your home and car. 
-              Quality products at competitive prices.
-            </p>
+    <footer className="bg-gray-100 py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <h3 className="text-lg font-bold">Sah Store</h3>
+            <p className="text-sm">Algiers, Algeria</p>
+            <p className="text-sm">Livraison 58 Wilaya</p>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold mb-4 text-primary">Quick Links</h3>
-            <div className="space-y-2">
-              <Link to="/" className="block text-muted-foreground hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link to="/products" className="block text-muted-foreground hover:text-primary transition-colors">
-                Products
-              </Link>
-              <Link to="/about" className="block text-muted-foreground hover:text-primary transition-colors">
-                About Us
-              </Link>
-              <Link to="/cart" className="block text-muted-foreground hover:text-primary transition-colors">
-                Cart
-              </Link>
-            </div>
+          <div className="flex items-center space-x-4 mb-4 md:mb-0">
+            <a href="https://www.facebook.com/profile.php?id=61575900085211" target="_blank" rel="noopener noreferrer">
+              <Facebook size={24} className="text-black hover:text-primary" />
+            </a>
+            <a href="https://www.instagram.com/sahstoredz/" target="_blank" rel="noopener noreferrer">
+              <Instagram size={24} className="text-black hover:text-primary" />
+            </a>
           </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold mb-4 text-primary">Legal</h3>
-            <div className="space-y-2">
-              <Link to="#" className="block text-muted-foreground hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="#" className="block text-muted-foreground hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="#" className="block text-muted-foreground hover:text-primary transition-colors">
-                Shipping Policy
-              </Link>
-              <Link to="#" className="block text-muted-foreground hover:text-primary transition-colors">
-                Return Policy
-              </Link>
-            </div>
+          <div className="contact-numbers text-center md:text-right">
+            <a href="tel:+213558488197" className="block text-sm hover:text-primary">0558 48 81 97</a>
+            <a href="tel:+213561303266" className="block text-sm hover:text-primary">0561 30 32 66</a>
           </div>
         </div>
-
-        <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-muted-foreground">
-            © 2024 SahStore DZ. All rights reserved.
-          </p>
+        <div className="text-center text-xs text-gray-500 mt-8">
+          &copy; {new Date().getFullYear()} Sah Store. All Rights Reserved.
         </div>
       </div>
     </footer>
